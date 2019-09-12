@@ -1,2 +1,2 @@
 # descriptive-stats-phenotype-data
-this script is under development
+this script is under development.
