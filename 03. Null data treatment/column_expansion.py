@@ -4,8 +4,7 @@ encode the entries
 '''
 
 def column_expansion (dataframe):       
-    column_name = '<Trait>'
-    accession_group = string_split(dataframe[column_name])
+    accession_group = string_split(dataframe)
     
     #encode the entries
     from sklearn import preprocessing #input encoder library
@@ -13,7 +12,7 @@ def column_expansion (dataframe):
     le = preprocessing.LabelEncoder()
     accession_group = le.fit(accession_group).transform(accession_group)
            
-    #Add column 'accession_group to dataframe'
+    #Add column 'accession_group' to dataframe
     dataframe['Accession_group'] = accession_group
     
     return dataframe
