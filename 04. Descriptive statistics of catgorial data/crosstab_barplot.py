@@ -7,6 +7,7 @@ def crosstab_barplot() :
     import matplotlib.pyplot as plt
     %matplotlib inline
 
+    crosstab = categorial_crosstab()
     trait = input('Whict trait to show ? ')
     a = list(crosstab['Category'][crosstab['Trait']==trait])
     objects = a[0]
